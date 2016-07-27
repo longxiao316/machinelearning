@@ -37,7 +37,7 @@ def cluster(data,k):
     return clst
 dt=[random.random()*100000 for i in range(10000)]
 data=np.array(dt).reshape(5000,2)
-mtxs=cluster(data,5)
+mtxs=cluster(data,9)
 for m in mtxs:
     mtx=np.array(m)
     if mtx.size > 0:

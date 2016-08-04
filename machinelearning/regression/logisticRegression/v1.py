@@ -101,5 +101,6 @@ def multitest():
     for k in range(numTests):
         errorSum+=colicTest()
     print "after %d iterations the average error rate is : %f" % (numTests,errorSum/float(numTests))
+    
 
 

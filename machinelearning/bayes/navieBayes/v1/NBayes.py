@@ -8,7 +8,7 @@ class NBayes():
         self.tf=0
         self.idf=0
         self.df=0
-        self.cp=0 #p(x|yi)
+        self.cp=0 #p(xi|yi)
         self.labelEvidence={} #p(yi)
         self.labelcount=0
         self.vocabularyLen = 0
@@ -27,13 +27,16 @@ class NBayes():
     def cal_wordFreq(self,data):
         self.tf=[self.docLen,self.vocabularyLen]
         self.df=[self.vocabularyLen]
+
         for d in range(self.docLen):
             doc=data[d]
             for i in range(self.vocabularyLen):
                 term=self.vocabulary[i]
                 count=doc.count(term)
                 self.tf[d,i]=count
-
+    def cal_cp(self):
+        self.cp=[self.labelcount,self.vocabularyLen]
+        return
     def classify(self):
         return
 a= np.arange(16).reshape(4,4)

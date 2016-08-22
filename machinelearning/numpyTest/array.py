@@ -8,4 +8,10 @@ def t2():
     b=np.arange(5)
     print b.dtype.itemsize
     return
-t2()
+def t3():
+    a=np.arange(9).reshape(3,3)
+    b=np.arange(5,14).reshape(3,3)
+    print a
+    print b
+    print np.concatenate(a,b)
+t3()
